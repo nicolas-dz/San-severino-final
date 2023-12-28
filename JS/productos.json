@@ -1,0 +1,83 @@
+[
+    {"id" : "pizza-01",
+     "titulo" : "pizza muzarella",
+    "imagen" : "../img/pizzamuza.jpg",
+     "categoria" :{
+       "nombre" : "pizzas",
+        "id" : "pizzas"
+     },
+     "precio" : 2000
+    },
+    {"id" : "pizza-02",
+     "titulo" : "pizza jamon",
+     "imagen" : "../img/pizzacalabresa.jpg",
+     "categoria" : {
+        "nombre" : "pizzas",
+        "id" : "pizzas"
+     },
+     "precio" : 3000
+    },
+    {"id" : "pizza-03",
+     "titulo" : "pizza de cebolla",
+     "imagen" : "../img/pizzacebolla.jpg",
+     "categoria" :{
+        "nombre" : "pizzas",
+        "id" : "pizzas"
+     },
+     "precio" : 1500
+    },
+    {"id" : "empanada-01",
+     "titulo" : "empanada j y q",
+     "imagen" : "../img/empanadajyq.jpg",
+     "categoria" :{
+        "nombre" : "empanadas",
+        "id" : "empanadas"
+     },
+     "precio" : 500
+    },
+    {"id" : "empanada-02",
+     "titulo" : "empanada carne",
+     "imagen" : "../img/empanadacarne.jpg",
+     "categoria" :{
+        "nombre" : "empanadas",
+        "id" : "empanadas"
+     },
+     "precio" : 500
+    },
+    {"id" : "empanada-03",
+     "titulo" : "empanada pollo",
+     "imagen" : "../img/empanadapollo.jpg",
+     "categoria" :{
+        "nombre" : "empanadas",
+        "id" : "empanadas"
+     },
+     "precio" : 500
+    },
+    {"id" : "calzone-01",
+     "titulo" : "calzone muzarella",
+     "imagen" : "../img/calzon.jpg",
+     "categoria" :{
+        "nombre" : "calzones",
+        "id" : "calzones"
+     },
+     "precio" : 2500
+    },
+    {"id" : "calzone-02",
+     "titulo" : "calzone napolitano",
+     "imagen" : "../img/calzonnapo.jpg",
+     "categoria" :{
+        "nombre" : "calzones",
+        "id" : "calzones"
+     },
+     "precio" : 2500
+    },
+    {"id" : "calzone-03",
+     "titulo" : "calzone calabres",
+     "imagen" : "../img/calzon.jpg",
+     "categoria" :{
+        "nombre" : "calzones",
+        "id" : "calzones"
+     },
+     "precio" : 3000
+    }
+    ]

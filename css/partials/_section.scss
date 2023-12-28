@@ -1,0 +1,319 @@
+
+
+ @-webkit-keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+
+ @-webkit-keyframes roll-in-right{0%{-webkit-transform:translateX(800px) rotate(540deg);transform:translateX(800px) rotate(540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-right{0%{-webkit-transform:translateX(800px) rotate(540deg);transform:translateX(800px) rotate(540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+
+ @-webkit-keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+ 
+ .contenido__quien{
+    display:grid;
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: unset;
+    
+    gap: 1rem;
+
+    font-family:$secondaryFont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    min-height: 100vh;
+    min-width:100%;
+    align-items:center;
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr ;
+
+    grid-template-areas: 
+    "imagen-quien texto__quien"
+    ;
+
+    .imagen__quien{
+        
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+      
+        
+      
+        -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+        animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+        animation-delay: 0.2s;
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-quien;}
+        
+    .texto__quien {
+        
+        text-align: center;
+       
+        
+        font-size: 1rem;
+       
+
+
+        -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.3s;
+        
+        grid-area:texto__quien;
+    }
+  
+
+}
+.productos_titulo {
+    background-color: $mainColor;
+    margin: 0%;
+    color: $txtColor;
+    font-family: $secondaryFont;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+.texto_titulo{
+    background-color: $mainColor;
+    margin: 0%;
+    color: $txtColor;
+    font-family: $secondaryFont;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+.tarjetas__productos {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: $mainColor;
+    gap: 3rem;
+    font-family: $secondaryFont;
+    text-align: center;
+   
+    
+}
+.card-body{
+    background-color: $segColor;
+    
+
+    .card-title {color: $txtColor;}
+    
+}
+.card-text {color: $txtColor;}
+.card { 
+    &:hover {cursor:pointer;}
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;}
+
+  
+@mixin grid-center($display,$align,$justy) {
+    display:$display;
+    text-align:$align;
+    justify-content:$justy;
+}
+.contenido__servicios{
+    list-style: none;
+    padding: 4rem;
+    margin-bottom: unset;
+    gap: 0.3rem;
+    
+
+    font-family:$secondaryFont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    display:grid;
+    min-height: 100vh;
+    min-width:100%;
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "imagen-delivery texto__delivery"
+    "texto__local    imagen-local  "
+    "imagen-party    texto__party";
+    
+    .imagen__delivery{
+        display: grid;
+        background-image:url(../img/delivery-servicios.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        opacity: 70%;
+        &:hover {cursor:pointer;
+        opacity: 95%;}
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-delivery;}
+        
+    .texto__delivery {
+        @include grid-center(grid,center,center);
+
+        font-size: 1rem;
+        background-color: $segColor;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        &:hover {cursor:pointer;}
+
+        
+        grid-area:texto__delivery;
+    }
+    .imagen__local{
+        display: grid;
+        background-image:url(../img/takeaway-servicios.jpg);
+      
+        background-position:bottom;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        opacity: 70%;
+        &:hover {cursor:pointer;
+        opacity: 95%;}
+        
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-local;}
+        
+    .texto__local {
+        @include grid-center(grid,center,center);
+
+        font-size: 1rem;
+        background-color: $segColor;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        &:hover {cursor:pointer;}
+
+    
+        
+        grid-area:texto__local;
+    }
+    .imagen__party{
+        display: grid;
+        background-image:url("../img/pizza-party.png");
+        background-position:bottom;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        opacity: 70%;
+        &:hover {cursor:pointer;
+        opacity: 95%;}
+        
+
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-party;}
+        
+
+    .texto__party {
+        @include grid-center(grid,center,center);
+        font-size: 1rem;
+        background-color: $segColor;
+        border: 2px solid $txtColor;
+        border-radius: 2px;
+        &:hover {cursor:pointer;}
+
+        
+    
+        grid-area:texto__party;
+    }
+    
+}
+
+
+
+
+.contenido__contacto{
+    list-style: none;
+    padding: 5rem;
+    margin-bottom: unset;
+    gap: 1rem;
+
+    font-family:$secondaryFont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    display:grid;
+    min-height: 100vh;
+    min-width:100%;
+
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2fr 1fr;
+
+    grid-template-areas: 
+    "gps ubicacion__contacto"
+    " gps  redes__contacto ";
+    
+    .ubicacion__contacto{
+        display:grid;
+        align-items:center;
+        font-size: 2rem;
+        background-color: $mainColor;
+        text-align: center;
+        grid-area:ubicacion__contacto;
+        transition: 2s;
+        .texto_what {margin-top: 25px;}
+        .what_contacto {margin-top: 35px;
+            transition: 0.5s;
+        &:hover {cursor: pointer;
+        opacity: 70%;}}
+    }
+    .redes__contacto{
+        display: grid;
+        background-color: $mainColor;
+        background-position:bottom;
+        text-align: center;
+    
+        transition: 0.75s;
+        .insta {background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            &:hover {cursor: pointer;
+                opacity: 70%;}
+           }
+           
+            .face{background-color: #033957;
+                background-image: linear-gradient(90deg, #033957 28%, #63ada6 100%);
+                &:hover {cursor: pointer;
+                    opacity: 70%;}}
+                
+                 
+    
+        grid-area:redes__contacto;}
+        
+    .gps {
+        display:grid;
+        align-items: center;
+        justify-content: center;
+        background-color: $mainColor;
+       
+       
+        grid-area:gps;
+    }
+}
+

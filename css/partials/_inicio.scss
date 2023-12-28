@@ -1,0 +1,196 @@
+.inicio {
+    list-style: none;
+    
+    font-family: $secondaryFont;
+    font-style:normal;
+    text-decoration: none;
+    background-color:$mainColor;
+    color: $txtColor;
+  
+
+    display:grid;
+    height: 100vh;
+    width: 100%;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1.5fr;
+
+    grid-template-areas: 
+    "quien productos servicios     contacto"
+    "imagen-inicio imagen-inicio   texto-inicio texto-inicio ";
+ 
+}
+.imagen-inicio {
+    display: grid;
+    background-image: url(../img/quien-4.jpg);
+    background-position: center;
+    background-size:cover;
+    opacity: 80%;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+    transition: 0.5s;
+    
+    justify-content: center;
+    align-items: center;
+    
+    grid-area: imagen-inicio;
+   
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.7s;
+    &:hover{opacity: 100%;
+        cursor:pointer;
+        }
+    
+}
+.texto-inicio {
+    display: grid;
+    background-color:$mainColor;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
+   
+    
+    justify-content: center;
+    
+    text-decoration: none;
+    color: $txtColor;
+    text-align: center;
+    
+    grid-area: texto-inicio; 
+    .titulo {display: grid;
+        font-size: 5rem;
+        align-content: end;
+        color: $txtColor;
+    }
+    .descripcion {display: grid;
+        font-size: 1.5rem;}
+        -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.7s;
+   }
+   
+
+
+.quien {
+    display: grid;
+    background-color:$mainColor;
+    justify-content: center;
+    align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+    text-align: center;
+    a:visited {
+        color:$txtColor
+        }
+
+
+
+    transition: 0.75s;
+    grid-area: quien;
+
+    &:hover { background-color:$segColor;
+        font-size: 3rem;
+        border: 8px solid $mainColor;
+    }
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.1s;
+}
+
+.productos {
+    display: grid;
+    background-color:$segColor;
+    justify-content: center;
+    align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+    text-align: center;
+    a:visited {
+        color:$txtColor
+        }
+    
+    transition: 0.75s;
+    grid-area: productos;
+
+    &:hover { background-color:$segColor;
+        font-size: 3rem;
+        border: 8px solid $mainColor;
+    }
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay:0.3s;
+}
+
+.servicios {
+    display: grid;
+    background-color:$mainColor;
+    justify-content: center;
+    align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+    text-align: center;
+    a:visited {
+        color:$txtColor
+        }
+
+
+
+
+    transition: 0.75s;
+
+
+    grid-area:servicios;
+   
+    &:hover { background-color:$segColor;
+        font-size: 3rem;
+        border: 8px solid $mainColor;
+    }
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.4s;
+ 
+}
+
+.contacto {
+    display: grid;
+    background-color:$segColor;
+    justify-content:center;
+    align-items:center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+    text-align: center;
+    a:visited {
+        color:$txtColor
+        }
+
+
+
+
+    transition: 0.75s;
+
+    grid-area:contacto;
+
+    &:hover {
+        background-color: $mainColor;
+        font-size: 3rem;
+        border: 8px solid $segColor;
+       
+    }
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.5s;
+   
+}
+
+
+ @-webkit-keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}
+
+
+@-webkit-keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}
+
+ @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
+

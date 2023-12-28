@@ -1,0 +1,85 @@
+@media screen and (max-width:1000px) 
+{
+    .inicio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr ;
+
+    grid-template-areas: 
+    "texto-inicio texto-inicio"
+    "quien        productos"
+    "servicios     contacto" 
+    ; }
+    
+    .contenido__quien {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+    
+        grid-template-areas: 
+        "texto__quien texto__quien"
+        "texto__quien texto__quien"
+        "imagen-quien imagen-quien"
+        "imagen-quien imagen-quien";}
+        
+        .contenido__contacto{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr ;
+        
+            grid-template-areas: 
+            "gps"
+            "ubicacion__contacto"
+            "redes__contacto";
+        }
+        .contenido__servicios{
+            padding: 1rem;
+            gap: 0.5rem;
+                
+            grid-template-columns:1fr;
+            grid-template-rows: repeat(6,1fr);
+        
+            grid-template-areas: 
+            "imagen-delivery"
+            "texto__delivery "
+            "imagen-local  "
+            "texto__local"
+            "imagen-party"
+            "texto__party";
+        }     
+ }
+
+@media screen and (max-width:600px) {
+    .inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+    "texto-inicio" 
+    "quien"
+    "productos"
+    "servicios"
+    "contacto"; 
+  
+}
+.contenido__quien {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "texto__quien "
+    "imagen-quien ";}
+
+    .contenido__servicios{
+        padding: 1rem;
+        gap: 0.5rem;
+            
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(6,1fr);
+    
+        grid-template-areas: 
+        "imagen-delivery"
+        "texto__delivery "
+        "imagen-local  "
+        "texto__local"
+        "imagen-party"
+        "texto__party";
+    }
+}
